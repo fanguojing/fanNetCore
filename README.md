@@ -1,0 +1,2 @@
+# fanNetCore
+.netcoreMy

@@ -1,0 +1,14 @@
+D:\Fanguojing\FANapi\FANapi\bin\Debug\netcoreapp2.1\FANapi.deps.json
+D:\Fanguojing\FANapi\FANapi\bin\Debug\netcoreapp2.1\FANapi.runtimeconfig.json
+D:\Fanguojing\FANapi\FANapi\bin\Debug\netcoreapp2.1\FANapi.runtimeconfig.dev.json
+D:\Fanguojing\FANapi\FANapi\bin\Debug\netcoreapp2.1\FANapi.dll
+D:\Fanguojing\FANapi\FANapi\bin\Debug\netcoreapp2.1\FANapi.pdb
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.csprojAssemblyReference.cache
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.csproj.CoreCompileInputs.cache
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.RazorAssemblyInfo.cache
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.RazorAssemblyInfo.cs
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.AssemblyInfoInputs.cache
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.AssemblyInfo.cs
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.RazorTargetAssemblyInfo.cache
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.dll
+D:\Fanguojing\FANapi\FANapi\obj\Debug\netcoreapp2.1\FANapi.pdb

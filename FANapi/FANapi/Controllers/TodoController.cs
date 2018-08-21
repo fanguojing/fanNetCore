@@ -27,32 +27,66 @@ namespace FANapi.Controllers
         [HttpGet]
         public IEnumerable<TodoItem> Get()
         {
-           
+            return _todoContext.TodoItems.ToList();
         }
 
-        // GET: api/Todo/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        // GET: api/Todo/5  name属性
+        [HttpGet("{id}", Name = "GetTodo")]
+        public IActionResult Get(int id)
         {
-            return "value";
+            var todo = _todoContext.TodoItems.FirstOrDefault(u => u.Id == id);
+            if(todo==null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(todo);
         }
 
         // POST: api/Todo
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] TodoItem todo)
         {
+            if(todo==null)
+            {
+                return BadRequest();
+            }
+            _todoContext.TodoItems.Add(todo);
+            _todoContext.SaveChanges();
+            return CreatedAtRoute("GetTodo", new { id = todo.Id }, todo);
         }
 
         // PUT: api/Todo/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Update(int id, [FromBody] TodoItem todo)
         {
+            if(todo==null || todo.Id !=id)
+            {
+                return BadRequest();
+            }
+            var item = _todoContext.TodoItems.FirstOrDefault(u => u.Id == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            item.IsCompelete = todo.IsCompelete;
+            item.Name = todo.Name;
+            _todoContext.TodoItems.Update(item);
+            _todoContext.SaveChanges();
+            return new NoContentResult();
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var todo = _todoContext.TodoItems.FirstOrDefault(u => u.Id == id);
+            if(todo==null)
+            {
+                return NotFound();
+            }
+            _todoContext.TodoItems.Remove(todo);
+            _todoContext.SaveChanges();
+            return new NoContentResult();
         }
     }
 }
